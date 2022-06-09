@@ -49,8 +49,6 @@ class ImageEyeDetection:
             right_eye = frame[r_top:r_bottom, r_left:r_right]
 
 
-
-
         try:
             face_eye_detect.append((left_eye_pos, right_eye_pos,  face_pos))
         except Exception as e:
@@ -58,9 +56,3 @@ class ImageEyeDetection:
             print("Can't find a face")
             pass
         return face_eye_detect
-
-
-
-    def extract_features_from_img(self, cur_img):
-        pass
-
