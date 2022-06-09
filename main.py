@@ -9,7 +9,7 @@ def video(name, duration):
     blink_detector = EyeStateClassifier()
 
     '''Setup'''
-    blink_detector.EYE_AR_CONSEC_FRAMES = 1 # hyperparameter
+    blink_detector.EYE_AR_CONSEC_FRAMES = 2 # hyperparameter
     eps = 0.9 # hyperparameter
     # flexible size of ROI eye
 
@@ -42,8 +42,8 @@ if __name__ == '__main__':
 
     name = sys.argv[1]
     duration = int(sys.argv[2])
-    #name = "video1"
-    #duration = 18
+    #name = "video0"
+    #duration = 17
     video(name, duration)
 
 

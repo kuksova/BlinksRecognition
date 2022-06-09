@@ -58,7 +58,7 @@ class EyeStateClassifier():
         fourcc = cv2.VideoWriter_fourcc(*"mp4v")
         frameSize = (int(640), int(480))
         fps1 = 10 #FPS_MS
-        new_name = "OpenVino_blink_" + name + ".avi"
+        new_name = "Annotated_blink_" + name + ".avi"
         new_video = cv2.VideoWriter(new_name, fourcc=fourcc, fps=fps1, apiPreference=0,
                                     frameSize=frameSize)
         print(name+".webm")
