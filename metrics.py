@@ -4,12 +4,13 @@ import numpy as np
 def binary_classification_metrics(timing_pred, timing_truth, eps):
 
     true_positive = 0
-
+    i = 0
     for a in timing_truth:
-        for b in timing_pred:
-            if abs(a - b) < eps:
-                print("Matched blinks ", a, b)
+        for b in range(i, len(timing_pred)):
+            if abs(a - timing_pred[b]) < eps:
+                print("Matched blinks ", a, timing_pred[b])
                 true_positive +=1
+                i +=1
                 break
 
     print('Count Matched Blinks ', true_positive)
